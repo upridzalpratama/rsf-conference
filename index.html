@@ -3,315 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RSF Conference — Global Academic Conferences for Researchers & Professionals</title>
-<meta name="description" content="Join International Conferences That Connect Research, Practice, and Global Collaboration. Present, publish in indexed journals, and build your global network.">
+<title>Scholarvein — Empowering Academic Conferences Worldwide</title>
+<meta name="description" content="Scholarvein helps institutions manage world-class academic conferences and connects researchers with global presentation and publication opportunities.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --navy:#0A2540;
-  --royal:#0052CC;
-  --accent:#FF6B00;
-  --white:#FFFFFF;
-  --light:#F4F7F9;
-  --muted:#6b7280;
-  --border:#e2e8f0;
-  --shadow-sm:0 1px 4px rgba(10,37,64,.08);
-  --shadow-md:0 4px 20px rgba(10,37,64,.13);
-  --shadow-lg:0 10px 40px rgba(10,37,64,.18);
-  --radius:12px;
-  --tr:all .3s cubic-bezier(.4,0,.2,1);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Inter',sans-serif;color:#1a1a2e;line-height:1.6;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.2}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;height:auto}
-
-/* UTILITIES */
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-.sp{padding:80px 0}
-.slabel{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--royal);margin-bottom:12px;display:block}
-.stitle{font-size:clamp(26px,3.8vw,40px);font-weight:800;color:var(--navy);margin-bottom:14px}
-.ssub{font-size:16px;color:var(--muted);line-height:1.7;max-width:580px}
-.sdivider{width:56px;height:4px;background:linear-gradient(90deg,var(--royal),#0066FF);border-radius:2px;margin:14px auto 0}
-.sdivider.left{margin-left:0}
-.shead{text-align:center;margin-bottom:56px}
-.shead .ssub{margin:16px auto 0}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;min-height:44px;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:.4px;cursor:pointer;transition:var(--tr);border:2px solid transparent}
-.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-.btn-primary:hover{background:#e55a00;border-color:#e55a00;transform:translateY(-2px);box-shadow:0 6px 22px rgba(255,107,0,.36)}
-.btn-outline-white{background:transparent;color:#fff;border-color:rgba(255,255,255,.65)}
-.btn-outline-white:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-2px)}
-.btn-white{background:#fff;color:var(--royal);border-color:#fff}
-.btn-white:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
-
-.fade-up{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
-.fade-up:nth-child(2){transition-delay:.1s}
-.fade-up:nth-child(3){transition-delay:.2s}
-.fade-up:nth-child(4){transition-delay:.3s}
-.fade-up:nth-child(5){transition-delay:.4s}
-.fade-up:nth-child(6){transition-delay:.5s}
-
-/* ── HEADER ── */
-#topbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);transition:box-shadow .3s}
-#topbar.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.32)}
-.tb-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 24px;height:64px;max-width:1400px;margin:0 auto}
-.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.logo-mark{width:36px;height:36px;background:var(--royal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:15px;color:#fff}
-.logo-text{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;white-space:nowrap}
-.logo-text em{color:var(--accent);font-style:normal}
-.tb-center{font-size:12px;color:rgba(255,255,255,.58);text-align:center;line-height:1.4;flex:1;display:none}
-@media(min-width:1024px){.tb-center{display:block}}
-.tb-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.clink{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.75);font-size:13px;font-weight:500;transition:var(--tr);padding:7px 12px;border-radius:6px}
-.clink:hover{color:#fff;background:rgba(255,255,255,.09)}
-.clink.wa{color:#25D366}
-.clink.wa:hover{background:rgba(37,211,102,.12)}
-.clink svg{width:18px;height:18px;flex-shrink:0}
-.hide-sm{display:none}
-@media(min-width:768px){.hide-sm{display:inline}}
-
-/* ── HERO ── */
-#hero{min-height:100vh;padding-top:64px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,37,64,.97) 0%,rgba(0,82,204,.82) 55%,rgba(10,37,64,.95) 100%);z-index:1}
-.hero-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px}
-.hero-orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.12;z-index:0}
-.hero-orb-1{width:700px;height:700px;background:var(--royal);top:-250px;right:-150px}
-.hero-orb-2{width:450px;height:450px;background:#0066FF;bottom:-150px;left:5%}
-.hero-content{position:relative;z-index:2;max-width:860px;color:#fff;padding:80px 24px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(0,82,204,.28);border:1px solid rgba(0,82,204,.45);border-radius:100px;padding:6px 16px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:28px}
-.eyebrow-dot{width:6px;height:6px;background:#25D366;border-radius:50%;animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-#hero h1{font-size:clamp(30px,5.2vw,58px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:22px;letter-spacing:-.5px}
-#hero h1 span{color:var(--accent)}
-.hero-sub{font-size:clamp(15px,1.9vw,18px);color:rgba(255,255,255,.72);margin-bottom:38px;max-width:660px;line-height:1.75}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
-.hero-badges{display:flex;gap:18px;flex-wrap:wrap}
-.hbadge{display:flex;align-items:center;gap:7px;font-size:13px;color:rgba(255,255,255,.78);font-weight:500}
-.hbadge svg{width:16px;height:16px;color:#25D366;flex-shrink:0}
-
-/* ── STATS ── */
-#stats{background:#fff;padding:68px 0;border-bottom:1px solid var(--border)}
-.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
-@media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
-.stat-item{text-align:center;padding:28px 20px;position:relative}
-.stat-item::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:36px;height:3px;background:var(--royal);border-radius:2px}
-.stat-num{font-family:'Montserrat',sans-serif;font-size:clamp(34px,4.5vw,50px);font-weight:900;color:var(--royal);line-height:1;margin-bottom:8px}
-.stat-lbl{font-size:14px;color:var(--muted);font-weight:500}
-
-/* ── WHY JOIN ── */
-#why-join{background:var(--light)}
-.feat-grid{display:grid;grid-template-columns:1fr;gap:22px}
-@media(min-width:640px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1024px){.feat-grid{grid-template-columns:repeat(3,1fr)}}
-.feat-card{background:#fff;border-radius:var(--radius);padding:34px 26px;box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:var(--tr);position:relative;overflow:hidden}
-.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--royal),#0066FF);transform:scaleX(0);transform-origin:left;transition:var(--tr)}
-.feat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.feat-card:hover::before{transform:scaleX(1)}
-.feat-icon{width:54px;height:54px;background:rgba(0,82,204,.08);border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:26px}
-.feat-card h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:9px}
-.feat-card p{font-size:14px;color:var(--muted);line-height:1.6}
-
-/* ── AUDIENCE ── */
-#audience{background:#fff}
-.aud-grid{display:grid;grid-template-columns:1fr;gap:26px}
-@media(min-width:768px){.aud-grid{grid-template-columns:repeat(3,1fr)}}
-.aud-card{border-radius:var(--radius);padding:34px 26px;border:2px solid var(--border);transition:var(--tr)}
-.aud-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.aud-card:nth-child(1){border-top:4px solid var(--royal)}
-.aud-card:nth-child(2){border-top:4px solid var(--accent);background:var(--navy);color:#fff}
-.aud-card:nth-child(3){border-top:4px solid #0066FF}
-.aud-icon{font-size:38px;margin-bottom:14px}
-.aud-card h3{font-size:19px;font-weight:800;margin-bottom:7px;color:var(--navy)}
-.aud-card:nth-child(2) h3{color:#fff}
-.aud-desc{font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.5}
-.aud-card:nth-child(2) .aud-desc{color:rgba(255,255,255,.6)}
-.cklist{list-style:none;display:flex;flex-direction:column;gap:9px}
-.cklist li{display:flex;align-items:flex-start;gap:9px;font-size:14px;color:#1a1a2e}
-.aud-card:nth-child(2) .cklist li{color:rgba(255,255,255,.83)}
-.cklist li::before{content:'✓';color:#25D366;font-weight:700;background:rgba(37,211,102,.1);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px}
-
-/* ── BENEFITS ── */
-#benefits{background:var(--light)}
-.ben-layout{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
-@media(min-width:1024px){.ben-layout{grid-template-columns:1fr 1fr}}
-.ben-img{border-radius:20px;background:linear-gradient(135deg,var(--navy) 0%,var(--royal) 100%);min-height:400px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.ben-img::before,.ben-img::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.05)}
-.ben-img::before{width:320px;height:320px;top:-120px;right:-100px}
-.ben-img::after{width:200px;height:200px;bottom:-70px;left:-60px}
-.ben-img-inner{text-align:center;color:#fff;padding:40px;position:relative;z-index:1}
-.ben-img-inner .big{font-size:72px;margin-bottom:18px}
-.ben-img-inner h3{font-size:20px;font-weight:700;margin-bottom:7px}
-.ben-img-inner p{font-size:13px;opacity:.65}
-.ben-list{list-style:none;display:flex;flex-direction:column;gap:13px}
-.ben-list li{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:#fff;border-radius:10px;border:1px solid var(--border);font-size:14px;transition:var(--tr)}
-.ben-list li:hover{border-color:var(--royal);box-shadow:var(--shadow-sm)}
-.ben-num{width:28px;height:28px;background:var(--royal);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;font-family:'Montserrat',sans-serif}
-
-/* ── HOW IT WORKS ── */
-#how{background:#fff}
-.steps{display:flex;flex-direction:column;gap:22px;position:relative}
-@media(min-width:1024px){.steps{flex-direction:row;align-items:flex-start}}
-.step{flex:1;text-align:center}
-.step-arrow{display:none}
-@media(min-width:1024px){.step-arrow{display:flex;align-items:center;justify-content:center;padding-top:24px;font-size:22px;color:var(--royal);opacity:.45}}
-.step-num{width:54px;height:54px;background:linear-gradient(135deg,var(--navy),var(--royal));color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;margin:0 auto 14px;position:relative}
-.step-num::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(0,82,204,.22)}
-.step h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:7px}
-.step p{font-size:13px;color:var(--muted);line-height:1.5;max-width:170px;margin:0 auto}
-
-
-/* ── PUBLICATION ── */
-#pub{background:#fff}
-.pub-layout{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
-@media(min-width:1024px){.pub-layout{grid-template-columns:1.3fr 1fr}}
-.pub-text .stitle{text-align:left}
-.pub-text p{color:var(--muted);line-height:1.8;margin-bottom:14px;font-size:15px}
-.pub-tags{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0 16px}
-.ptag{padding:5px 13px;background:rgba(0,82,204,.07);border:1px solid rgba(0,82,204,.2);border-radius:100px;font-size:11px;font-weight:700;color:var(--royal);font-family:'Montserrat',sans-serif;letter-spacing:.3px}
-.pub-disc{font-size:12px;color:var(--muted);font-style:italic;line-height:1.65;border-top:1px solid var(--border);padding-top:14px}
-.pub-img{border-radius:20px;background:linear-gradient(155deg,#0052CC,var(--navy));min-height:340px;display:flex;align-items:center;justify-content:center;padding:36px}
-.pub-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%}
-.pubstat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:18px;text-align:center;color:#fff}
-.pubstat-n{font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;margin-bottom:4px}
-.pubstat-l{font-size:11px;opacity:.65;letter-spacing:.4px}
-
-/* ── TESTIMONIALS ── */
-#testi{background:var(--light);overflow:hidden}
-.tcarousel{position:relative}
-.ttrack-wrap{overflow:hidden}
-.ttrack{display:flex;gap:22px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
-.tcard{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-sm);border:1px solid var(--border);min-width:calc(33.333% - 15px);flex-shrink:0}
-@media(max-width:1023px){.tcard{min-width:calc(50% - 11px)}}
-@media(max-width:640px){.tcard{min-width:100%}}
-.qmark{font-family:'Montserrat',sans-serif;font-size:72px;line-height:.75;color:rgba(0,82,204,.12);font-weight:900;margin-bottom:12px}
-.ttext{font-size:14px;color:#1a1a2e;line-height:1.75;margin-bottom:22px;font-style:italic}
-.tauthor{display:flex;align-items:center;gap:12px}
-.tavatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--royal));display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;color:#fff;flex-shrink:0}
-.tname{font-weight:700;font-size:13px;color:var(--navy);font-family:'Montserrat',sans-serif}
-.ttitle{font-size:12px;color:var(--muted);margin-top:2px}
-.tstars{color:#FBBF24;font-size:13px;margin-bottom:10px}
-.tcontrols{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:36px}
-.tbtn{width:44px;height:44px;border-radius:50%;border:2px solid var(--border);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--tr);color:var(--navy)}
-.tbtn:hover{background:var(--royal);border-color:var(--royal);color:#fff}
-.tdots{display:flex;gap:7px;align-items:center}
-.tdot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:var(--tr)}
-.tdot.active{background:var(--royal);width:22px;border-radius:4px}
-
-/* ── PARTNERS ── */
-#partners{background:#fff;padding:60px 0}
-.logos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-@media(min-width:640px){.logos-grid{grid-template-columns:repeat(4,1fr)}}
-@media(min-width:1024px){.logos-grid{grid-template-columns:repeat(6,1fr)}}
-.logo-item{background:var(--light);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:68px;filter:grayscale(100%);opacity:.55;transition:var(--tr)}
-.logo-item:hover{filter:grayscale(0%);opacity:1;box-shadow:var(--shadow-sm)}
-.logo-ph{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--navy);text-align:center;letter-spacing:.5px;line-height:1.4}
-
-/* ── WA CTA ── */
-#wacta{background:var(--navy);padding:80px 0;text-align:center;position:relative;overflow:hidden}
-#wacta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:50px 50px}
-.wacta-inner{position:relative;z-index:1}
-.wacta-inner h2{color:#fff;font-size:clamp(22px,3.8vw,38px);margin-bottom:14px}
-.wacta-inner > p{color:rgba(255,255,255,.6);font-size:16px;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
-.wa-main{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;padding:17px 34px;border-radius:10px;font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;text-decoration:none;transition:var(--tr);min-height:54px;margin-bottom:40px}
-.wa-main:hover{background:#1da954;transform:translateY(-3px);box-shadow:0 10px 30px rgba(37,211,102,.32)}
-.wa-hint{color:rgba(255,255,255,.38);font-size:12px;margin-bottom:24px}
-.intent-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:780px;margin:0 auto}
-@media(min-width:768px){.intent-grid{grid-template-columns:repeat(3,1fr)}}
-.ibtn{display:flex;align-items:center;gap:9px;padding:13px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;color:rgba(255,255,255,.82);font-size:13px;font-weight:600;font-family:'Montserrat',sans-serif;text-decoration:none;min-height:44px;transition:var(--tr)}
-.ibtn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff;transform:translateY(-2px)}
-.ibtn-ic{font-size:17px}
-
-/* ── CTA BANNER ── */
-#ctabanner{background:linear-gradient(90deg,var(--royal),#0066FF);padding:30px 0}
-.ctab-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
-.ctab-text h3{color:#fff;font-size:19px;font-weight:700;margin-bottom:3px}
-.ctab-text p{color:rgba(255,255,255,.72);font-size:14px}
-.ctab-btns{display:flex;gap:11px;flex-wrap:wrap}
-
-/* ── FOOTER ── */
-#footer{background:var(--navy);padding:64px 0 30px}
-.footer-grid{display:grid;grid-template-columns:1fr;gap:44px;margin-bottom:44px}
-@media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
-.fbrand p{color:rgba(255,255,255,.5);font-size:13px;line-height:1.7;margin-top:14px;max-width:270px}
-.fcol h4{color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
-.flinks{list-style:none;display:flex;flex-direction:column;gap:9px}
-.flinks a{color:rgba(255,255,255,.5);font-size:13px;transition:var(--tr)}
-.flinks a:hover{color:#fff}
-.fcontact{display:flex;gap:9px;align-items:flex-start;color:rgba(255,255,255,.5);font-size:13px;margin-bottom:10px}
-.fcontact a{color:rgba(255,255,255,.5);transition:var(--tr)}
-.fcontact a:hover{color:#fff}
-.fbottom{border-top:1px solid rgba(255,255,255,.09);padding-top:26px;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.fcopy{color:rgba(255,255,255,.38);font-size:12px}
-.fdisc{color:rgba(255,255,255,.3);font-size:12px;font-style:italic;max-width:580px;line-height:1.6}
-
-/* ── CONFERENCE LIST ── */
-#conf-list{background:var(--white)}
-.conf-filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
-.cf-btn{padding:8px 20px;border-radius:100px;border:2px solid var(--border);background:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;transition:var(--tr);min-height:36px}
-.cf-btn:hover{border-color:var(--royal);color:var(--royal)}
-.cf-btn.active{background:var(--royal);border-color:var(--royal);color:#fff}
-.conf-grid{display:grid;grid-template-columns:1fr;gap:22px}
-@media(min-width:640px){.conf-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1024px){.conf-grid{grid-template-columns:repeat(3,1fr)}}
-.conf-card{background:#fff;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden;display:flex;flex-direction:column;transition:var(--tr)}
-.conf-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
-.conf-card-top{padding:22px 22px 0;position:relative}
-.conf-field-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:100px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
-.badge-blue{background:rgba(0,82,204,.09);color:var(--royal)}
-.badge-orange{background:rgba(255,107,0,.09);color:var(--accent)}
-.badge-green{background:rgba(37,211,102,.1);color:#1a7a43}
-.badge-purple{background:rgba(124,58,237,.1);color:#7c3aed}
-.badge-teal{background:rgba(20,184,166,.1);color:#0d9488}
-.badge-navy{background:rgba(10,37,64,.08);color:var(--navy)}
-.conf-status-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:5px}
-.dot-open{background:#25D366}
-.dot-soon{background:#FBBF24}
-.dot-closed{background:#ef4444}
-.conf-card h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:8px;line-height:1.3}
-.conf-meta{display:flex;flex-direction:column;gap:6px;padding:14px 22px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:14px;background:var(--light)}
-.conf-meta-row{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
-.conf-meta-row svg{width:13px;height:13px;flex-shrink:0;color:var(--royal)}
-.conf-meta-row strong{color:var(--navy);font-weight:600}
-.conf-card-footer{padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
-.conf-deadline{font-size:11px;color:var(--muted);font-style:italic}
-.conf-deadline strong{color:var(--accent);font-style:normal}
-.btn-conf{padding:9px 18px;font-size:12px;min-height:36px;border-radius:7px}
-.conf-format-tag{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:6px;font-size:10px;font-weight:700;font-family:'Montserrat',sans-serif;text-transform:uppercase;letter-spacing:.4px}
-.fmt-virtual{background:rgba(20,184,166,.1);color:#0d9488}
-.fmt-hybrid{background:rgba(124,58,237,.1);color:#7c3aed}
-.fmt-inperson{background:rgba(0,82,204,.09);color:var(--royal)}
-.conf-show-more{text-align:center;margin-top:40px}
-.conf-card[data-hidden="true"]{display:none}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- HEADER -->
 <header id="topbar">
   <div class="tb-inner">
-    <a href="#" class="logo">
-      <div class="logo-mark">RSF</div>
-      <span class="logo-text">RSF <em>Conference</em></span>
+    <a href="index.html" class="logo">
+      <div class="logo-mark-sv">SV</div>
+      <span class="logo-text">Scholar<em>vein</em></span>
     </a>
-    <p class="tb-center">Global Academic Conferences for Researchers, Practitioners, and Professionals</p>
+
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <div class="nav-item">
+        <a href="manage.html" class="nav-link">Manage a Conference <span class="nav-arrow">▾</span></a>
+        <div class="dropdown">
+          <a href="manage.html#how-it-works">How It Works</a>
+          <a href="manage.html#packages">Packages &amp; Pricing</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="collaborate.html" class="nav-link">Collaborate with Us <span class="nav-arrow">▾</span></a>
+        <div class="dropdown">
+          <a href="collaborate.html#create">Create an Impactful Conference</a>
+          <a href="collaborate.html#cohost">Become a Co-Organizer/Co-Host</a>
+          <a href="collaborate.html#sponsor">Become a Sponsor</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="present.html" class="nav-link">Present Your Research <span class="nav-arrow">▾</span></a>
+        <div class="dropdown">
+          <a href="present.html#submit">How to Submit</a>
+          <a href="present.html#publication">Publication Opportunity</a>
+          <a href="present.html#testimonials">Testimonials &amp; Videos</a>
+        </div>
+      </div>
+      <a href="upcoming.html" class="nav-link nav-cta">Upcoming Conferences</a>
+    </nav>
+
     <div class="tb-right">
       <a href="https://wa.me/62811227479" target="_blank" rel="noopener" class="clink wa">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span class="hide-sm">WhatsApp</span>
       </a>
-      <a href="mailto:info@rsfconference.com" class="clink">
+      <a href="mailto:info@scholarvein.com" class="clink">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <span class="hide-sm">Email Us</span>
       </a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileClose">✕</button>
+  <a href="index.html" class="mobile-nav-link">Home</a>
+  <a href="about.html" class="mobile-nav-link">About Us</a>
+  <a href="manage.html" class="mobile-nav-link">Manage a Conference</a>
+  <a href="manage.html#how-it-works" class="mobile-nav-sub">→ How It Works</a>
+  <a href="manage.html#packages" class="mobile-nav-sub">→ Packages &amp; Pricing</a>
+  <a href="collaborate.html" class="mobile-nav-link">Collaborate with Us</a>
+  <a href="collaborate.html#create" class="mobile-nav-sub">→ Create an Impactful Conference</a>
+  <a href="collaborate.html#cohost" class="mobile-nav-sub">→ Become a Co-Organizer/Co-Host</a>
+  <a href="collaborate.html#sponsor" class="mobile-nav-sub">→ Become a Sponsor</a>
+  <a href="present.html" class="mobile-nav-link">Present Your Research</a>
+  <a href="present.html#submit" class="mobile-nav-sub">→ How to Submit</a>
+  <a href="present.html#publication" class="mobile-nav-sub">→ Publication Opportunity</a>
+  <a href="present.html#testimonials" class="mobile-nav-sub">→ Testimonials &amp; Videos</a>
+  <a href="upcoming.html" class="mobile-nav-link" style="color:var(--accent)">Upcoming Conferences</a>
+  <a href="https://wa.me/62811227479" target="_blank" rel="noopener" class="mobile-nav-link" style="color:#25D366">💬 WhatsApp Us</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -323,24 +93,23 @@ img{max-width:100%;height:auto}
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="eyebrow-dot"></span>
-        Now Accepting Submissions · 2025 Conference Series
+        Academic Conference Platform · Trusted by Institutions Worldwide
       </div>
-      <h1>Join International Conferences That Connect <span>Research, Practice,</span> and Global Collaboration</h1>
-      <p class="hero-sub">Present your work, publish in indexed journals, and build your global network with leading academics and practitioners worldwide.</p>
+      <h1>Where <span>Academic Research</span> Meets Global Impact</h1>
+      <p class="hero-sub">Scholarvein empowers institutions to run world-class conferences and connects researchers, practitioners, and students with international presentation and publication opportunities.</p>
       <div class="hero-btns">
-        <a href="http://bit.ly/UpcomingConference-RSF" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="upcoming.html" class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           Explore Conferences
         </a>
-        <a href="https://wa.me/62811227479" target="_blank" rel="noopener" class="btn btn-outline-white">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Consult via WhatsApp
+        <a href="manage.html" class="btn btn-outline-white">
+          🏛️ Manage a Conference
         </a>
       </div>
       <div class="hero-badges">
         <div class="hbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Indexed Publications</div>
         <div class="hbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>International Networking</div>
-        <div class="hbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Expert Speakers</div>
+        <div class="hbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Expert Keynote Speakers</div>
         <div class="hbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Certificate of Participation</div>
       </div>
     </div>
@@ -359,204 +128,74 @@ img{max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- CONFERENCE LIST -->
-<section id="conf-list" class="sp">
+<!-- SERVICES GRID -->
+<section id="services" class="sp" style="background:var(--light)">
   <div class="container">
     <div class="shead">
-      <span class="slabel">Upcoming Events</span>
-      <h2 class="stitle">Daftar Konferensi Mendatang</h2>
+      <span class="slabel">What We Offer</span>
+      <h2 class="stitle">Everything You Need, Under One Platform</h2>
       <div class="sdivider"></div>
-      <p class="ssub">Pilih konferensi yang sesuai dengan bidang riset dan jadwal Anda. Semua konferensi menerima peserta internasional.</p>
+      <p class="ssub">Whether you're an institution wanting to run a conference or a researcher ready to present — Scholarvein is your end-to-end academic partner.</p>
     </div>
-
-    <!-- Filter Tabs -->
-    <div class="conf-filters">
-      <button class="cf-btn active" data-filter="all">🌐 Semua Bidang</button>
-      <button class="cf-btn" data-filter="education">🎓 Education</button>
-      <button class="cf-btn" data-filter="business">💹 Business &amp; Economics</button>
-      <button class="cf-btn" data-filter="health">🏥 Health &amp; Medicine</button>
-      <button class="cf-btn" data-filter="technology">💻 Technology &amp; Engineering</button>
-      <button class="cf-btn" data-filter="social">🤝 Social Sciences</button>
-      <button class="cf-btn" data-filter="environment">🌿 Environment</button>
+    <div class="services-grid">
+      <a href="manage.html" class="svc-card svc-card-1 fade-up">
+        <div class="svc-card-icon">🏛️</div>
+        <h3>Manage a Conference</h3>
+        <p>Full-service conference management — from subdomain setup and abstract submission system to paper review and certificate generation. Free to start.</p>
+        <span class="svc-card-arrow">Learn more →</span>
+      </a>
+      <a href="collaborate.html#create" class="svc-card svc-card-2 fade-up">
+        <div class="svc-card-icon">🤝</div>
+        <h3>Create an Impactful Conference</h3>
+        <p>Co-create a high-quality academic event with our experienced team. We handle logistics, marketing, and quality assurance while you focus on the content.</p>
+        <span class="svc-card-arrow">Learn more →</span>
+      </a>
+      <a href="collaborate.html#cohost" class="svc-card svc-card-3 fade-up">
+        <div class="svc-card-icon">🌐</div>
+        <h3>Become a Co-Organizer / Co-Host</h3>
+        <p>Partner with Scholarvein as a co-organizer or host institution. Gain visibility, shared resources, and a global network for your institution.</p>
+        <span class="svc-card-arrow">Learn more →</span>
+      </a>
+      <a href="present.html" class="svc-card svc-card-4 fade-up">
+        <div class="svc-card-icon">🎙️</div>
+        <h3>Present Your Research</h3>
+        <p>Submit your abstract, get accepted, present internationally, and publish in indexed journals. Open to researchers, practitioners, and postgraduate students.</p>
+        <span class="svc-card-arrow">Learn more →</span>
+      </a>
     </div>
+  </div>
+</section>
 
-    <!-- Conference Cards -->
-    <div class="conf-grid" id="confGrid">
-
-      <!-- 1 -->
-      <div class="conf-card fade-up" data-field="education">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-blue">🎓 Education</span>
-          <span class="conf-format-tag fmt-hybrid" style="float:right">⚡ Hybrid</span>
-          <h3>International Conference on Educational Research &amp; Innovation (ICERI 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>25–26 Juli 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kuala Lumpur, Malaysia &amp; Online</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-open"></span><strong>Pendaftaran Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>10 Jul 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20ICERI%202025%20on%2025-26%20July%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
+<!-- ABOUT SCHOLARVEIN SNIPPET -->
+<section id="about-snippet" class="sp" style="background:#fff">
+  <div class="container">
+    <div class="ben-layout">
+      <div class="ben-img">
+        <div class="ben-img-inner">
+          <div class="big">🌍</div>
+          <h3>Scholarvein — The Academic Vein</h3>
+          <p>Where knowledge flows, connections grow, and research reaches the world.</p>
         </div>
       </div>
-
-      <!-- 2 -->
-      <div class="conf-card fade-up" data-field="business">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-orange">💹 Business</span>
-          <span class="conf-format-tag fmt-virtual" style="float:right">🌐 Virtual</span>
-          <h3>Global Conference on Business, Management &amp; Entrepreneurship (GCBME 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>1–2 Agustus 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Online (Zoom Webinar)</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-open"></span><strong>Pendaftaran Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>18 Jul 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20GCBME%202025%20on%201-2%20August%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="conf-card fade-up" data-field="health">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-green">🏥 Health</span>
-          <span class="conf-format-tag fmt-hybrid" style="float:right">⚡ Hybrid</span>
-          <h3>International Conference on Public Health &amp; Medical Sciences (ICPHMS 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>14–15 Agustus 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Jakarta, Indonesia &amp; Online</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-open"></span><strong>Pendaftaran Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>25 Jul 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20ICPHMS%202025%20on%2014-15%20August%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
+      <div>
+        <span class="slabel">About Scholarvein</span>
+        <h2 class="stitle">A Platform Built by Academics, for Academics</h2>
+        <div class="sdivider left" style="margin-bottom:24px"></div>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:14px;font-size:15px">Scholarvein is a global academic conference platform that bridges institutions, researchers, and the broader knowledge community. We believe every research story deserves a world-class stage.</p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:24px;font-size:15px">From managing end-to-end conference operations to connecting presenters with indexed publication channels, we are the infrastructure behind impactful academic events — trusted by institutions across 120+ countries.</p>
+        <ul class="ben-list">
+          <li><div class="ben-num">✓</div>End-to-end conference management (platform + support)</li>
+          <li><div class="ben-num">✓</div>Indexed journal publication pathways</li>
+          <li><div class="ben-num">✓</div>Co-organizer and sponsorship programs</li>
+          <li><div class="ben-num">✓</div>Virtual, hybrid, and in-person event formats</li>
+          <li><div class="ben-num">✓</div>Dedicated support team available via WhatsApp</li>
+        </ul>
+        <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+          <a href="about.html" class="btn btn-primary">Learn About Us</a>
+          <a href="https://wa.me/62811227479?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20Scholarvein." target="_blank" rel="noopener" class="btn btn-outline-white" style="border-color:var(--royal);color:var(--royal)">Chat with Us</a>
         </div>
       </div>
-
-      <!-- 4 -->
-      <div class="conf-card fade-up" data-field="technology">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-purple">💻 Technology</span>
-          <span class="conf-format-tag fmt-virtual" style="float:right">🌐 Virtual</span>
-          <h3>World Conference on Artificial Intelligence &amp; Data Science (WCAIDS 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>22–23 Agustus 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Online (Google Meet)</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-soon"></span><strong>Segera Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>5 Agus 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20WCAIDS%202025%20on%2022-23%20August%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="conf-card fade-up" data-field="social">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-teal">🤝 Social Sciences</span>
-          <span class="conf-format-tag fmt-hybrid" style="float:right">⚡ Hybrid</span>
-          <h3>International Symposium on Social Sciences, Humanities &amp; Law (ISSHL 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>5–6 September 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bali, Indonesia &amp; Online</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-open"></span><strong>Pendaftaran Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>20 Agus 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20ISSHL%202025%20on%205-6%20September%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
-        </div>
-      </div>
-
-      <!-- 6 -->
-      <div class="conf-card fade-up" data-field="environment">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-green">🌿 Environment</span>
-          <span class="conf-format-tag fmt-inperson" style="float:right">🏛️ In-Person</span>
-          <h3>Global Forum on Sustainable Development &amp; Environmental Science (GFSD 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>19–20 September 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Yogyakarta, Indonesia</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-open"></span><strong>Pendaftaran Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>1 Sep 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20GFSD%202025%20on%2019-20%20September%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
-        </div>
-      </div>
-
-      <!-- 7 (hidden initially) -->
-      <div class="conf-card fade-up" data-field="education" data-hidden="true">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-blue">🎓 Education</span>
-          <span class="conf-format-tag fmt-hybrid" style="float:right">⚡ Hybrid</span>
-          <h3>Asia-Pacific Conference on Higher Education &amp; Curriculum Development (APCHE 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>3–4 Oktober 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Singapore &amp; Online</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-soon"></span><strong>Segera Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>15 Sep 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20APCHE%202025%20on%203-4%20October%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
-        </div>
-      </div>
-
-      <!-- 8 (hidden initially) -->
-      <div class="conf-card fade-up" data-field="business" data-hidden="true">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-orange">💹 Business</span>
-          <span class="conf-format-tag fmt-virtual" style="float:right">🌐 Virtual</span>
-          <h3>International Conference on Finance, Accounting &amp; Economics (ICFAE 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>17–18 Oktober 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Online (Zoom Webinar)</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-open"></span><strong>Pendaftaran Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>28 Sep 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20ICFAE%202025%20on%2017-18%20October%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
-        </div>
-      </div>
-
-      <!-- 9 (hidden initially) -->
-      <div class="conf-card fade-up" data-field="technology" data-hidden="true">
-        <div class="conf-card-top">
-          <span class="conf-field-badge badge-purple">💻 Technology</span>
-          <span class="conf-format-tag fmt-hybrid" style="float:right">⚡ Hybrid</span>
-          <h3>International Conference on Computer Science &amp; Information Systems (ICCSIS 2025)</h3>
-        </div>
-        <div class="conf-meta">
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>31 Okt – 1 Nov 2025</strong></span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Bandung, Indonesia &amp; Online</span></div>
-          <div class="conf-meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><span class="conf-status-dot dot-soon"></span><strong>Segera Dibuka</strong></span></div>
-        </div>
-        <div class="conf-card-footer">
-          <div class="conf-deadline">Batas Abstrak: <strong>10 Okt 2025</strong></div>
-          <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20ICCSIS%202025%20on%2031%20Oct%20-%201%20Nov%202025." target="_blank" rel="noopener" class="btn btn-primary btn-conf">Daftar Sekarang</a>
-        </div>
-      </div>
-
-    </div><!-- /conf-grid -->
-
-    <!-- Show More / View All -->
-    <div class="conf-show-more">
-      <button id="showMoreBtn" class="btn btn-outline-navy" style="border:2px solid var(--navy);color:var(--navy);background:#fff;padding:13px 32px;border-radius:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:var(--tr);min-height:44px" onclick="toggleMoreConf()">
-        Tampilkan Lebih Banyak ↓
-      </button>
-      <p style="margin-top:16px;font-size:13px;color:var(--muted)">
-        Tidak menemukan yang sesuai? <a href="https://wa.me/62811227479?text=Hello,%20I%20need%20help%20finding%20the%20right%20conference%20for%20my%20research%20field." target="_blank" rel="noopener" style="color:var(--royal);font-weight:600">Tanya tim kami via WhatsApp →</a>
-      </p>
     </div>
-
   </div>
 </section>
 
@@ -564,7 +203,7 @@ img{max-width:100%;height:auto}
 <section id="why-join" class="sp">
   <div class="container">
     <div class="shead">
-      <span class="slabel">Why RSF Conference</span>
+      <span class="slabel">Why Scholarvein</span>
       <h2 class="stitle">Why Join Our Conferences</h2>
       <div class="sdivider"></div>
       <p class="ssub">Everything you need to advance your academic and professional journey — all in one platform.</p>
@@ -581,7 +220,7 @@ img{max-width:100%;height:auto}
 </section>
 
 <!-- AUDIENCE -->
-<section id="audience" class="sp">
+<section id="audience" class="sp" style="background:#fff">
   <div class="container">
     <div class="shead">
       <span class="slabel">Made For You</span>
@@ -627,7 +266,7 @@ img{max-width:100%;height:auto}
 </section>
 
 <!-- BENEFITS -->
-<section id="benefits" class="sp">
+<section id="benefits" class="sp" style="background:var(--light)">
   <div class="container">
     <div class="ben-layout">
       <div class="ben-img">
@@ -657,7 +296,7 @@ img{max-width:100%;height:auto}
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how" class="sp">
+<section id="how" class="sp" style="background:#fff">
   <div class="container">
     <div class="shead">
       <span class="slabel">Simple Process</span>
@@ -679,41 +318,8 @@ img{max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- PUBLICATION -->
-<section id="pub" class="sp">
-  <div class="container">
-    <div class="pub-layout">
-      <div class="pub-text">
-        <span class="slabel">Academic Excellence</span>
-        <h2 class="stitle">Publication &amp; Academic Ecosystem</h2>
-        <div class="sdivider left" style="margin-bottom:22px"></div>
-        <p>RSF Conference has built a robust academic ecosystem connecting your research with prestigious publication channels. Our conferences transform presentations into high-quality, peer-reviewed publications.</p>
-        <p>We collaborate with reputable indexed journals and conference proceedings recognized by leading academic databases, ensuring your work receives the global visibility it deserves. Each paper undergoes rigorous double-blind peer review by domain experts.</p>
-        <p>Our editorial team works closely with authors to ensure publication-ready quality, providing feedback and guidance throughout submission and revision.</p>
-        <div class="pub-tags">
-          <span class="ptag">Scopus Indexed</span>
-          <span class="ptag">Web of Science</span>
-          <span class="ptag">DOAJ Listed</span>
-          <span class="ptag">Google Scholar</span>
-          <span class="ptag">Double-Blind Peer Review</span>
-          <span class="ptag">Open Access Options</span>
-        </div>
-        <p class="pub-disc">* Publication in indexed journals is subject to the quality of submitted papers and the specific conference's publication arrangement. Not all conferences guarantee Scopus or WoS indexing. Participants are encouraged to confirm publication details with the organizing committee prior to registration. RSF Conference facilitates but does not guarantee specific indexing outcomes.</p>
-      </div>
-      <div class="pub-img">
-        <div class="pub-stats">
-          <div class="pubstat"><div class="pubstat-n">50+</div><div class="pubstat-l">Journal Partners</div></div>
-          <div class="pubstat"><div class="pubstat-n">2,000+</div><div class="pubstat-l">Papers Published</div></div>
-          <div class="pubstat"><div class="pubstat-n">85%</div><div class="pubstat-l">Acceptance Rate</div></div>
-          <div class="pubstat"><div class="pubstat-n">4 Wks</div><div class="pubstat-l">Avg. Review Time</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
-<section id="testi" class="sp">
+<section id="testi" class="sp" style="background:var(--light);overflow:hidden">
   <div class="container">
     <div class="shead">
       <span class="slabel">Voices From Our Community</span>
@@ -723,11 +329,11 @@ img{max-width:100%;height:auto}
     <div class="tcarousel">
       <div class="ttrack-wrap">
         <div class="ttrack" id="ttrack">
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">Presenting at RSF Conference was a transformative experience. The quality of feedback from peers and keynote speakers was exceptional. My paper was subsequently accepted in a Scopus-indexed journal within three months.</p><div class="tauthor"><div class="tavatar">MR</div><div><div class="tname">Dr. Mohammed Al-Rashid</div><div class="ttitle">Associate Professor · King Abdullah University, Saudi Arabia</div></div></div></div>
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">As a PhD student, I was nervous presenting internationally for the first time. RSF Conference provided such a supportive environment. I made connections that led to a collaborative research grant with a UK university.</p><div class="tauthor"><div class="tavatar">AK</div><div><div class="tname">Amara Konteh</div><div class="ttitle">PhD Candidate · University of Ghana</div></div></div></div>
+          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">Presenting at the RSF Conference — powered by Scholarvein — was a transformative experience. The quality of feedback from peers and keynote speakers was exceptional. My paper was subsequently accepted in a Scopus-indexed journal within three months.</p><div class="tauthor"><div class="tavatar">MR</div><div><div class="tname">Dr. Mohammed Al-Rashid</div><div class="ttitle">Associate Professor · King Abdullah University, Saudi Arabia</div></div></div></div>
+          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">As a PhD student, I was nervous presenting internationally for the first time. The supportive environment built by Scholarvein was incredible. I made connections that led to a collaborative research grant with a UK university.</p><div class="tauthor"><div class="tavatar">AK</div><div><div class="tname">Amara Konteh</div><div class="ttitle">PhD Candidate · University of Ghana</div></div></div></div>
           <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">The hybrid format made it incredibly convenient. I attended virtually from Jakarta and still had meaningful networking sessions. The organizers were professional and responsive throughout the entire process.</p><div class="tauthor"><div class="tavatar">SW</div><div><div class="tname">Prof. Siti Wijaya</div><div class="ttitle">Professor of Economics · Universitas Indonesia</div></div></div></div>
           <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">Outstanding organization from start to finish. The multidisciplinary nature allowed me to gain perspectives from fields I hadn't considered. My research was enriched significantly by the cross-disciplinary discussions.</p><div class="tauthor"><div class="tavatar">LC</div><div><div class="tname">Dr. Liang Chen</div><div class="ttitle">Research Scientist · Tsinghua University, China</div></div></div></div>
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">RSF Conference connected me with an industry partner who is now co-funding my research project. The networking session design was brilliant — structured enough to make meaningful connections, flexible enough to explore opportunities.</p><div class="tauthor"><div class="tavatar">EO</div><div><div class="tname">Dr. Elena Okonkwo</div><div class="ttitle">Innovation Researcher · Lagos Business School, Nigeria</div></div></div></div>
+          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext">Scholarvein connected me with an industry partner who is now co-funding my research project. The networking session design was brilliant — structured enough to make meaningful connections, flexible enough to explore opportunities.</p><div class="tauthor"><div class="tavatar">EO</div><div><div class="tname">Dr. Elena Okonkwo</div><div class="ttitle">Innovation Researcher · Lagos Business School, Nigeria</div></div></div></div>
         </div>
       </div>
       <div class="tcontrols">
@@ -740,7 +346,7 @@ img{max-width:100%;height:auto}
 </section>
 
 <!-- PARTNERS -->
-<section id="partners">
+<section id="partners" style="background:#fff;padding:60px 0">
   <div class="container">
     <div class="shead">
       <span class="slabel">Our Community</span>
@@ -769,8 +375,8 @@ img{max-width:100%;height:auto}
   <div class="container">
     <div class="wacta-inner">
       <span class="slabel" style="color:rgba(255,255,255,.4)">Direct Access</span>
-      <h2>Ready to Join? Connect With Us on WhatsApp</h2>
-      <p>Get instant answers, personalized conference recommendations, and registration support directly from our team.</p>
+      <h2>Ready to Get Started? Let's Talk on WhatsApp</h2>
+      <p>Get instant answers, personalized conference recommendations, and partnership support directly from our team.</p>
       <div>
         <a href="https://wa.me/62811227479" target="_blank" rel="noopener" class="wa-main">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -779,12 +385,12 @@ img{max-width:100%;height:auto}
       </div>
       <p class="wa-hint">Or tell us who you are and we'll send you the most relevant information:</p>
       <div class="intent-grid">
-        <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20a%20Researcher%20and%20I%20would%20like%20to%20know%20more%20about%20the%20conference%20and%20publication%20opportunities." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">🔬</span>I am a Researcher</a>
-        <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20a%20Practitioner%20and%20I%20would%20like%20to%20know%20more%20about%20the%20conference%20opportunities." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">💼</span>I am a Practitioner</a>
+        <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20a%20Researcher%20and%20I%20would%20like%20to%20know%20more%20about%20conference%20and%20publication%20opportunities." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">🔬</span>I am a Researcher</a>
+        <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20a%20Practitioner%20and%20I%20would%20like%20to%20know%20more%20about%20conference%20opportunities." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">💼</span>I am a Practitioner</a>
         <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20a%20Student%20and%20I%20would%20like%20to%20know%20more%20about%20presenting%20my%20research." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">📖</span>I am a Student</a>
         <a href="https://wa.me/62811227479?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20publication%20opportunities%20in%20indexed%20journals." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">📚</span>I want to Publish</a>
-        <a href="https://wa.me/62811227479?text=Hello,%20I%20need%20more%20information%20about%20your%20upcoming%20conferences%20and%20registration%20process." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">❓</span>I need more Information</a>
-        <a href="https://wa.me/62811227479?text=Hello,%20I%20represent%20an%20Institution%20and%20would%20like%20to%20explore%20partnership%20opportunities." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">🏛️</span>I represent an Institution</a>
+        <a href="https://wa.me/62811227479?text=Hello,%20I%20am%20interested%20in%20managing%20or%20organizing%20a%20conference%20with%20Scholarvein." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">🏛️</span>I want to Organize</a>
+        <a href="https://wa.me/62811227479?text=Hello,%20I%20represent%20an%20Institution%20and%20would%20like%20to%20explore%20partnership%20opportunities%20with%20Scholarvein." target="_blank" rel="noopener" class="ibtn"><span class="ibtn-ic">🤝</span>I represent an Institution</a>
       </div>
     </div>
   </div>
@@ -796,11 +402,11 @@ img{max-width:100%;height:auto}
     <div class="ctab-inner">
       <div class="ctab-text">
         <h3>Don't Miss the Next Conference</h3>
-        <p>View all upcoming conferences and secure your spot today.</p>
+        <p>Explore all upcoming conferences and secure your spot today.</p>
       </div>
       <div class="ctab-btns">
-        <a href="http://bit.ly/UpcomingConference-RSF" target="_blank" rel="noopener" class="btn btn-white">View Upcoming Conferences</a>
-        <a href="https://wa.me/62811227479?text=Hello,%20I%20would%20like%20to%20register%20for%20an%20upcoming%20RSF%20Conference." target="_blank" rel="noopener" class="btn btn-outline-white">Register Now via WhatsApp</a>
+        <a href="upcoming.html" class="btn btn-white">View Upcoming Conferences</a>
+        <a href="https://wa.me/62811227479?text=Hello,%20I%20would%20like%20to%20register%20for%20an%20upcoming%20Scholarvein%20Conference." target="_blank" rel="noopener" class="btn btn-outline-white">Register via WhatsApp</a>
       </div>
     </div>
   </div>
@@ -811,39 +417,43 @@ img{max-width:100%;height:auto}
   <div class="container">
     <div class="footer-grid">
       <div class="fbrand">
-        <div class="logo"><div class="logo-mark">RSF</div><span class="logo-text">RSF <em>Conference</em></span></div>
-        <p>Connecting researchers, practitioners, and professionals through world-class international academic conferences. Building bridges between knowledge and global collaboration since 2015.</p>
+        <a href="index.html" class="logo" style="margin-bottom:14px;display:inline-flex">
+          <div class="logo-mark-sv">SV</div>
+          <span class="logo-text">Scholar<em>vein</em></span>
+        </a>
+        <p>A global academic conference platform connecting institutions, researchers, and the broader knowledge community. Building bridges between knowledge and global collaboration.</p>
       </div>
       <div class="fcol">
-        <h4>Quick Links</h4>
+        <h4>Pages</h4>
         <ul class="flinks">
-          <li><a href="#why-join">Why Join Us</a></li>
-          <li><a href="#audience">Who Should Attend</a></li>
-          <li><a href="#how">How It Works</a></li>
-          <li><a href="#reg">Register Interest</a></li>
-          <li><a href="http://bit.ly/UpcomingConference-RSF" target="_blank" rel="noopener">Upcoming Conferences</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="manage.html">Manage a Conference</a></li>
+          <li><a href="collaborate.html">Collaborate with Us</a></li>
+          <li><a href="present.html">Present Your Research</a></li>
+          <li><a href="upcoming.html">Upcoming Conferences</a></li>
         </ul>
       </div>
       <div class="fcol">
         <h4>Services</h4>
         <ul class="flinks">
-          <li><a href="#">Conference Presentations</a></li>
-          <li><a href="#">Journal Publication</a></li>
-          <li><a href="#">Workshops &amp; Training</a></li>
-          <li><a href="#">Institutional Partnerships</a></li>
-          <li><a href="#">Virtual Conferences</a></li>
+          <li><a href="manage.html#how-it-works">Conference Management</a></li>
+          <li><a href="manage.html#packages">Pricing Packages</a></li>
+          <li><a href="collaborate.html#create">Create a Conference</a></li>
+          <li><a href="collaborate.html#sponsor">Become a Sponsor</a></li>
+          <li><a href="present.html#publication">Publication Opportunity</a></li>
         </ul>
       </div>
       <div class="fcol">
         <h4>Contact Us</h4>
         <div class="fcontact">📱 <a href="https://wa.me/62811227479">+62 811 227 479</a></div>
-        <div class="fcontact">✉️ <a href="mailto:info@rsfconference.com">info@rsfconference.com</a></div>
+        <div class="fcontact">✉️ <a href="mailto:info@scholarvein.com">info@scholarvein.com</a></div>
         <div class="fcontact">🌐 <span>Global — Available Worldwide</span></div>
       </div>
     </div>
     <div class="fbottom">
-      <div class="fcopy">© 2025 RSF Conference. All rights reserved.</div>
-      <div class="fdisc">Disclaimer: RSF Conference facilitates academic presentations and connects authors with publishing opportunities. Conference acceptance and journal publication are subject to peer review standards and editorial decisions. Indexing in databases such as Scopus or Web of Science is determined by individual journal policies and cannot be guaranteed. Information on this website is subject to change without prior notice.</div>
+      <div class="fcopy">© 2025 Scholarvein. All rights reserved. Powered by RSF Conference.</div>
+      <div class="fdisc">Disclaimer: Scholarvein facilitates academic presentations and connects authors with publishing opportunities. Conference acceptance and journal publication are subject to peer review standards and editorial decisions. Indexing in databases such as Scopus or Web of Science is determined by individual journal policies and cannot be guaranteed.</div>
     </div>
   </div>
 </footer>
@@ -852,6 +462,10 @@ img{max-width:100%;height:auto}
 // Sticky header
 const tb = document.getElementById('topbar');
 window.addEventListener('scroll', () => tb.classList.toggle('scrolled', window.scrollY > 20));
+
+// Mobile nav
+document.getElementById('hamburger').onclick = () => document.getElementById('mobileNav').classList.add('open');
+document.getElementById('mobileClose').onclick = () => document.getElementById('mobileNav').classList.remove('open');
 
 // Count-up
 function countUp(el) {
@@ -887,10 +501,10 @@ statsIO.observe(document.getElementById('stats'));
 const track = document.getElementById('ttrack');
 const cards = track.querySelectorAll('.tcard');
 const dotsEl = document.getElementById('tdots');
-let cur = 0, vis = 3, timer;
+let cur = 0, visCount = 3, timer;
 
 function getVis() { return window.innerWidth < 641 ? 1 : window.innerWidth < 1024 ? 2 : 3; }
-function maxIdx() { return Math.max(0, cards.length - vis); }
+function maxIdx() { return Math.max(0, cards.length - visCount); }
 function slideW() { return cards[0].offsetWidth + 22; }
 
 function makeDots() {
@@ -921,50 +535,11 @@ track.addEventListener('touchend', e => {
 }, { passive: true });
 
 function restart() { clearInterval(timer); timer = setInterval(next, 4500); }
-window.addEventListener('resize', () => { vis = getVis(); makeDots(); goTo(Math.min(cur, maxIdx())); });
+window.addEventListener('resize', () => { visCount = getVis(); makeDots(); goTo(Math.min(cur, maxIdx())); });
 
-vis = getVis(); makeDots(); restart();
+visCount = getVis(); makeDots(); restart();
 
-// ── CONFERENCE FILTER ──
-const filterBtns = document.querySelectorAll('.cf-btn');
-const confCards  = document.querySelectorAll('#confGrid .conf-card');
-let moreVisible  = false;
-
-function applyFilter(field) {
-  confCards.forEach(card => {
-    const match = field === 'all' || card.dataset.field === field;
-    const isExtra = card.dataset.hidden === 'true';
-    if (match && (!isExtra || moreVisible)) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-  // update show-more visibility
-  const hasHidden = [...confCards].some(c => c.dataset.hidden === 'true' && (field === 'all' || c.dataset.field === field) && !moreVisible);
-  document.getElementById('showMoreBtn').style.display = hasHidden ? '' : 'none';
-}
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    applyFilter(btn.dataset.filter);
-  });
-});
-
-function toggleMoreConf() {
-  moreVisible = !moreVisible;
-  const activeFilter = document.querySelector('.cf-btn.active')?.dataset.filter || 'all';
-  applyFilter(activeFilter);
-  const btn = document.getElementById('showMoreBtn');
-  btn.textContent = moreVisible ? 'Tampilkan Lebih Sedikit ↑' : 'Tampilkan Lebih Banyak ↓';
-}
-
-// init: hide extra cards, show button
-applyFilter('all');
-
-// Smooth scroll
+// Smooth scroll (anchor links)
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const h = a.getAttribute('href');
