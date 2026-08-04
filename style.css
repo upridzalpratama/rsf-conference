@@ -448,9 +448,12 @@ img{max-width:100%;height:auto}
 .sol-block li::before{content:'✓';color:#006647;font-weight:700;flex-shrink:0}
 
 /* ══════════════════════════════════════════
-   LOGO MARK SV
+   LOGO
 ══════════════════════════════════════════ */
-.logo-mark-sv{width:36px;height:36px;background:var(--royal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:900;font-size:13px;color:var(--navy);letter-spacing:-.5px}
+.logo{display:inline-flex;align-items:center;text-decoration:none;background:#fff;padding:6px 12px;border-radius:10px}
+.logo-img{height:36px;width:auto;display:block}
+#footer .logo{margin-bottom:16px}
+#footer .logo-img{height:36px}
 
 /* ══════════════════════════════════════════
    PAGE HERO (inner pages)
