@@ -139,6 +139,12 @@ img{max-width:100%;height:auto}
 .ben-img-inner .big{font-size:72px;margin-bottom:18px}
 .ben-img-inner h3{font-size:20px;font-weight:700;margin-bottom:7px}
 .ben-img-inner p{font-size:13px;opacity:.65}
+/* Photo panel (documentation photos in hero boxes) */
+.ben-img.photo-panel,.about-snap-img.photo-panel{padding:0}
+.photo-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.photo-panel .photo-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:26px 26px 22px;background:linear-gradient(transparent,rgba(0,18,38,.88));color:#fff;text-align:left}
+.photo-panel .photo-cap h3{font-size:18px;font-weight:700;margin-bottom:4px;color:#fff}
+.photo-panel .photo-cap p{font-size:12px;opacity:.78;margin:0}
 .ben-list{list-style:none;display:flex;flex-direction:column;gap:13px}
 .ben-list li{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:#fff;border-radius:10px;border:1px solid var(--border);font-size:14px;transition:var(--tr)}
 .ben-list li:hover{border-color:var(--royal);box-shadow:var(--shadow-sm)}
@@ -199,9 +205,17 @@ img{max-width:100%;height:auto}
 .logos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
 @media(min-width:640px){.logos-grid{grid-template-columns:repeat(4,1fr)}}
 @media(min-width:1024px){.logos-grid{grid-template-columns:repeat(6,1fr)}}
-.logo-item{background:var(--light);border:1px solid var(--border);border-radius:10px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:68px;filter:grayscale(100%);opacity:.55;transition:var(--tr)}
-.logo-item:hover{filter:grayscale(0%);opacity:1;box-shadow:var(--shadow-sm)}
+.logo-item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:center;justify-content:center;min-height:96px;transition:var(--tr)}
+.logo-item:hover{box-shadow:var(--shadow-sm);border-color:var(--royal);transform:translateY(-2px)}
+.logo-item img{max-width:100%;max-height:64px;width:auto;height:auto;object-fit:contain}
 .logo-ph{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;color:var(--navy);text-align:center;letter-spacing:.5px;line-height:1.4}
+/* Conference logos grid */
+.conf-logos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:44px}
+@media(min-width:640px){.conf-logos-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.conf-logos-grid{grid-template-columns:repeat(5,1fr)}}
+.conf-logo-item{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px 18px;display:flex;align-items:center;justify-content:center;min-height:120px;transition:var(--tr)}
+.conf-logo-item:hover{box-shadow:var(--shadow-sm);border-color:var(--royal);transform:translateY(-2px)}
+.conf-logo-item img{max-width:100%;max-height:76px;width:auto;height:auto;object-fit:contain}
 
 /* ── WA CTA ── */
 #wacta{background:var(--navy);padding:80px 0;text-align:center;position:relative;overflow:hidden}
