@@ -69,6 +69,9 @@ img{max-width:100%;height:auto}
 .lang-toggle:hover{border-color:var(--royal);color:var(--royal);background:rgba(0,230,167,.08)}
 .lang-toggle-mobile{margin:0 0 20px;align-self:flex-start;border-color:rgba(0,31,63,.25);color:var(--navy)}
 .lang-toggle-mobile:hover{border-color:var(--royal);color:var(--royal)}
+/* Research Synergy Foundation inline link */
+.rsf-link{color:inherit;text-decoration:underline;text-decoration-color:var(--royal);text-underline-offset:2px;transition:var(--tr)}
+.rsf-link:hover{color:var(--royal)}
 @media(min-width:768px){.hide-sm{display:inline}}
 
 /* ── HERO ── */
