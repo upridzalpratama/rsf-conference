@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -117,10 +117,11 @@
 <section id="stats" style="background:var(--light)">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item fade-up"><div class="stat-num" data-target="5000" data-suffix="+">0</div><div class="stat-lbl" data-id="Peserta di Seluruh Dunia">Participants Worldwide</div></div>
-      <div class="stat-item fade-up"><div class="stat-num" data-target="120" data-suffix="+">0</div><div class="stat-lbl" data-id="Negara Terwakili">Countries Represented</div></div>
-      <div class="stat-item fade-up"><div class="stat-num" data-target="300" data-suffix="+">0</div><div class="stat-lbl" data-id="Konferensi Terselenggara">Conferences Hosted</div></div>
-      <div class="stat-item fade-up"><div class="stat-num" data-target="95" data-suffix="%">0</div><div class="stat-lbl" data-id="Tingkat Kepuasan">Satisfaction Rate</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="15" data-suffix="">0</div><div class="stat-lbl" data-id="Kota & Negara">Cities &amp; Countries</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="6232" data-suffix="">0</div><div class="stat-lbl" data-id="Manuskrip">Manuscripts</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="21453" data-suffix="">0</div><div class="stat-lbl" data-id="Anggota dari 87 Negara">Members from 87 Countries</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="7190" data-suffix="">0</div><div class="stat-lbl" data-id="Afiliasi">Affiliations</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="244" data-suffix="">0</div><div class="stat-lbl" data-id="Konferensi Internasional">International Conferences</div></div>
     </div>
   </div>
 </section>
@@ -220,7 +221,7 @@ window.addEventListener('scroll',()=>tb.classList.toggle('scrolled',window.scrol
 document.getElementById('hamburger').onclick=()=>document.getElementById('mobileNav').classList.add('open');
 document.getElementById('mobileClose').onclick=()=>document.getElementById('mobileNav').classList.remove('open');
 // Count-up
-function countUp(el){const t=+el.dataset.target,s=el.dataset.suffix||'',d=2000,st=performance.now();const tick=n=>{const p=Math.min((n-st)/d,1),e=1-Math.pow(1-p,3),v=Math.floor(e*t);el.textContent=(t>=1000?v.toLocaleString():v)+s;if(p<1)requestAnimationFrame(tick);else el.textContent=(t>=1000?t.toLocaleString():t)+s;};requestAnimationFrame(tick);}
+function countUp(el){const t=+el.dataset.target,s=el.dataset.suffix||'',d=2000,st=performance.now();const tick=n=>{const p=Math.min((n-st)/d,1),e=1-Math.pow(1-p,3),v=Math.floor(e*t);el.textContent=(t>=1000?v.toLocaleString('en-US'):v)+s;if(p<1)requestAnimationFrame(tick);else el.textContent=(t>=1000?t.toLocaleString('en-US'):t)+s;};requestAnimationFrame(tick);}
 const sio=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stat-num').forEach(countUp);sio.unobserve(e.target);}});},{threshold:.2});
 const ss=document.getElementById('stats');if(ss)sio.observe(ss);
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1});

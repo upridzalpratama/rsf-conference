@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -121,10 +121,11 @@
 <section id="stats">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item fade-up"><div class="stat-num" data-target="5000" data-suffix="+">0</div><div class="stat-lbl" data-id="Peserta di Seluruh Dunia">Participants Worldwide</div></div>
-      <div class="stat-item fade-up"><div class="stat-num" data-target="120" data-suffix="+">0</div><div class="stat-lbl" data-id="Negara Terwakili">Countries Represented</div></div>
-      <div class="stat-item fade-up"><div class="stat-num" data-target="300" data-suffix="+">0</div><div class="stat-lbl" data-id="Konferensi Terselenggara">Conferences Hosted</div></div>
-      <div class="stat-item fade-up"><div class="stat-num" data-target="95" data-suffix="%">0</div><div class="stat-lbl" data-id="Tingkat Kepuasan">Satisfaction Rate</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="15" data-suffix="">0</div><div class="stat-lbl" data-id="Kota & Negara">Cities &amp; Countries</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="6232" data-suffix="">0</div><div class="stat-lbl" data-id="Manuskrip">Manuscripts</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="21453" data-suffix="">0</div><div class="stat-lbl" data-id="Anggota dari 87 Negara">Members from 87 Countries</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="7190" data-suffix="">0</div><div class="stat-lbl" data-id="Afiliasi">Affiliations</div></div>
+      <div class="stat-item fade-up"><div class="stat-num" data-target="244" data-suffix="">0</div><div class="stat-lbl" data-id="Konferensi Internasional">International Conferences</div></div>
     </div>
   </div>
 </section>
@@ -491,9 +492,9 @@ function countUp(el) {
     const p = Math.min((now - start) / dur, 1);
     const ease = 1 - Math.pow(1 - p, 3);
     const val = Math.floor(ease * target);
-    el.textContent = (target >= 1000 ? val.toLocaleString() : val) + suffix;
+    el.textContent = (target >= 1000 ? val.toLocaleString('en-US') : val) + suffix;
     if (p < 1) requestAnimationFrame(tick);
-    else el.textContent = (target >= 1000 ? target.toLocaleString() : target) + suffix;
+    else el.textContent = (target >= 1000 ? target.toLocaleString('en-US') : target) + suffix;
   };
   requestAnimationFrame(tick);
 }
