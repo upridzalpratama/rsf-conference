@@ -64,6 +64,11 @@ img{max-width:100%;height:auto}
 .clink.wa:hover{background:rgba(37,211,102,.12)}
 .clink svg{width:18px;height:18px;flex-shrink:0}
 .hide-sm{display:none}
+/* Language toggle */
+.lang-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:34px;padding:0 12px;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;border-radius:7px;cursor:pointer;transition:var(--tr)}
+.lang-toggle:hover{border-color:var(--royal);color:var(--royal);background:rgba(0,230,167,.08)}
+.lang-toggle-mobile{margin:0 0 20px;align-self:flex-start;border-color:rgba(0,31,63,.25);color:var(--navy)}
+.lang-toggle-mobile:hover{border-color:var(--royal);color:var(--royal)}
 @media(min-width:768px){.hide-sm{display:inline}}
 
 /* ── HERO ── */
