@@ -319,32 +319,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testi" class="sp" style="background:var(--light);overflow:hidden">
-  <div class="container">
-    <div class="shead">
-      <span class="slabel" data-id="Suara dari Komunitas Kami">Voices From Our Community</span>
-      <h2 class="stitle" data-id="Apa Kata Peserta">What Participants Say</h2>
-      <div class="sdivider"></div>
-    </div>
-    <div class="tcarousel">
-      <div class="ttrack-wrap">
-        <div class="ttrack" id="ttrack">
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext" data-id="Mempresentasikan di RSF Conference, yang didukung Scholarvein, adalah pengalaman yang transformatif. Kualitas masukan dari rekan dan keynote speaker luar biasa. Paper saya kemudian diterima di jurnal terindeks Scopus dalam tiga bulan.">Presenting at the RSF Conference, powered by Scholarvein, was a transformative experience. The quality of feedback from peers and keynote speakers was exceptional. My paper was subsequently accepted in a Scopus-indexed journal within three months.</p><div class="tauthor"><div class="tavatar">MR</div><div><div class="tname">Dr. Mohammed Al-Rashid</div><div class="ttitle" data-id="Associate Professor · King Abdullah University, Arab Saudi">Associate Professor · King Abdullah University, Saudi Arabia</div></div></div></div>
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext" data-id="Sebagai mahasiswa S3, saya gugup presentasi secara internasional untuk pertama kali. Lingkungan suportif yang dibangun Scholarvein luar biasa. Saya menjalin koneksi yang menghasilkan hibah riset kolaboratif dengan universitas di Inggris.">As a PhD student, I was nervous presenting internationally for the first time. The supportive environment built by Scholarvein was incredible. I made connections that led to a collaborative research grant with a UK university.</p><div class="tauthor"><div class="tavatar">AK</div><div><div class="tname">Amara Konteh</div><div class="ttitle" data-id="Kandidat PhD · University of Ghana">PhD Candidate · University of Ghana</div></div></div></div>
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext" data-id="Format hybrid membuatnya sangat praktis. Saya hadir secara virtual dari Jakarta dan tetap mendapat sesi networking yang bermakna. Panitia profesional dan responsif sepanjang proses.">The hybrid format made it incredibly convenient. I attended virtually from Jakarta and still had meaningful networking sessions. The organizers were professional and responsive throughout the entire process.</p><div class="tauthor"><div class="tavatar">SW</div><div><div class="tname">Prof. Siti Wijaya</div><div class="ttitle" data-id="Profesor Ekonomi · Universitas Indonesia">Professor of Economics · Universitas Indonesia</div></div></div></div>
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext" data-id="Penyelenggaraan yang luar biasa dari awal hingga akhir. Sifatnya yang multidisiplin memungkinkan saya memperoleh perspektif dari bidang yang belum pernah saya pertimbangkan. Riset saya diperkaya secara signifikan oleh diskusi lintas disiplin.">Outstanding organization from start to finish. The multidisciplinary nature allowed me to gain perspectives from fields I hadn't considered. My research was enriched significantly by the cross-disciplinary discussions.</p><div class="tauthor"><div class="tavatar">LC</div><div><div class="tname">Dr. Liang Chen</div><div class="ttitle" data-id="Peneliti · Tsinghua University, Tiongkok">Research Scientist · Tsinghua University, China</div></div></div></div>
-          <div class="tcard"><div class="tstars">★★★★★</div><div class="qmark">"</div><p class="ttext" data-id="Scholarvein menghubungkan saya dengan mitra industri yang kini turut mendanai proyek riset saya. Desain sesi networking-nya brilian, cukup terstruktur untuk menjalin koneksi bermakna, cukup fleksibel untuk mengeksplorasi peluang.">Scholarvein connected me with an industry partner who is now co-funding my research project. The networking session design was brilliant, structured enough to make meaningful connections, flexible enough to explore opportunities.</p><div class="tauthor"><div class="tavatar">EO</div><div><div class="tname">Dr. Elena Okonkwo</div><div class="ttitle" data-id="Peneliti Inovasi · Lagos Business School, Nigeria">Innovation Researcher · Lagos Business School, Nigeria</div></div></div></div>
-        </div>
-      </div>
-      <div class="tcontrols">
-        <button class="tbtn" id="tPrev" aria-label="Previous"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <div class="tdots" id="tdots"></div>
-        <button class="tbtn" id="tNext" aria-label="Next"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- PARTNERS -->
 <section id="partners" style="background:#fff;padding:60px 0">
@@ -540,47 +514,6 @@ const statsIO = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 statsIO.observe(document.getElementById('stats'));
 
-// Testimonial carousel
-const track = document.getElementById('ttrack');
-const cards = track.querySelectorAll('.tcard');
-const dotsEl = document.getElementById('tdots');
-let cur = 0, visCount = 3, timer;
-
-function getVis() { return window.innerWidth < 641 ? 1 : window.innerWidth < 1024 ? 2 : 3; }
-function maxIdx() { return Math.max(0, cards.length - visCount); }
-function slideW() { return cards[0].offsetWidth + 22; }
-
-function makeDots() {
-  dotsEl.innerHTML = '';
-  for (let i = 0; i <= maxIdx(); i++) {
-    const d = document.createElement('div');
-    d.className = 'tdot' + (i === cur ? ' active' : '');
-    d.onclick = () => goTo(i);
-    dotsEl.appendChild(d);
-  }
-}
-function updateDots() { dotsEl.querySelectorAll('.tdot').forEach((d, i) => d.classList.toggle('active', i === cur)); }
-function goTo(i) { cur = Math.max(0, Math.min(i, maxIdx())); track.style.transform = `translateX(-${cur * slideW()}px)`; updateDots(); }
-function next() { goTo(cur < maxIdx() ? cur + 1 : 0); }
-function prev() { goTo(cur > 0 ? cur - 1 : maxIdx()); }
-
-document.getElementById('tNext').onclick = () => { next(); restart(); };
-document.getElementById('tPrev').onclick = () => { prev(); restart(); };
-track.addEventListener('mouseenter', () => clearInterval(timer));
-track.addEventListener('mouseleave', () => restart());
-
-let tx = 0;
-track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; clearInterval(timer); }, { passive: true });
-track.addEventListener('touchend', e => {
-  const diff = tx - e.changedTouches[0].clientX;
-  if (Math.abs(diff) > 50) diff > 0 ? next() : prev();
-  restart();
-}, { passive: true });
-
-function restart() { clearInterval(timer); timer = setInterval(next, 4500); }
-window.addEventListener('resize', () => { visCount = getVis(); makeDots(); goTo(Math.min(cur, maxIdx())); });
-
-visCount = getVis(); makeDots(); restart();
 
 // Smooth scroll (anchor links)
 document.querySelectorAll('a[href^="#"]').forEach(a => {
